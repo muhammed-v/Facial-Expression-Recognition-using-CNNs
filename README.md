@@ -18,28 +18,15 @@
 
 ### Other instructions
 - `sample-images` folder contains the sample images for emotion detection
-- `screenshots` and `model-training-logs.txt`folder contain the required screenshots of training logs, validation results, and final performance metrics. 
-- `web-app-version` folder contains the web app for uploading images and predicting the emotions within them.
-- web-app-version/static folder contains the stylesheet for the web app
-  -->"templates" folder contains the html files.
-  -->"uploads" folder stores the uploaded images and the processed images formed after emotion detection.
-  --> `python app.py` to run the web application
-- pip install keras
-- pip3 install --upgrade tensorflow
-- pip install pillow
-- pip install scipy
-- pip install scikit-learn matplotlib seaborn
--> 
-->
-->`web-app-version` folder contains the web app for uploading images and predicting the emotions within them.
-  -->"static" folder contains the stylesheet for the web app
-  -->"templates" folder contains the html files.
-  -->"uploads" folder stores the uploaded images and the processed images formed after emotion detection.
-  --> `python app.py` to run the web application
-
-->`emotion-model-training.py` is used for model training. After training, detection_model.h5 and detection_model.json are created.
-->`emotion-detector.py` is used to run the emotion detection software.
-
+- `screenshots` and `model-training-logs.txt`folder contain the required screenshots of training logs, validation results, and final performance metrics.
+- `emotion-model-training.py` is used for model training. After training, detection_model.h5 and detection_model.json are created.
+- `emotion-detector.py` is used to run the emotion detection software.
+- `web-app-version` folder contains the web app for uploading images and predicting the emotions within them. 
+- web-app-version/static folder contains the stylesheet for the web app. 
+- web-app-version/templates folder contains the html files.
+- web-app-version/uploads folder stores the uploaded images and the processed images formed after emotion detection.
+- `python app.py` to run the web application
+  
 
 
 
