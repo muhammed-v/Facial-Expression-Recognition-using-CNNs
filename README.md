@@ -94,7 +94,7 @@ The trained model was deployed via a Flask web application that allows users to 
 - Validation Accuracy: The model achieved an `accuracy of 0.6308163833937029` on the validation dataset.
 - F1-Score: 
 Classification Report:
-              precision    recall  `f1-score`   support
+              precision    recall  f1-score   support
 
        `Angry       0.52      0.54      0.53       958` 
    `Disgusted       0.77      0.60      0.68       111`
