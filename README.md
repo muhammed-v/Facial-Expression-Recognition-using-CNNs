@@ -20,7 +20,7 @@
 - `sample-images` folder contains the sample images for emotion detection
 - `screenshots` and `model-training-logs.txt`folder contain the required screenshots of training logs, validation results, and final performance metrics. 
 - `web-app-version` folder contains the web app for uploading images and predicting the emotions within them.
-  --"web-app-version/static" folder contains the stylesheet for the web app
+  -"web-app-version/static" folder contains the stylesheet for the web app
   -->"templates" folder contains the html files.
   -->"uploads" folder stores the uploaded images and the processed images formed after emotion detection.
   --> `python app.py` to run the web application
