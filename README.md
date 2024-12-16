@@ -96,8 +96,8 @@ The trained model was deployed via a Flask web application that allows users to 
 Classification Report:
               precision    recall  `f1-score`   support
 
-       `Angry       0.52      0.54      0.53       958` Disgusted       0.77      0.60      0.68       111
-   ``
+       `Angry       0.52      0.54      0.53       958` 
+   `Disgusted       0.77      0.60      0.68       111`
      `Fearful       0.53      0.46      0.49      1024`
        `Happy       0.80      0.83      0.82      1774`
      `Neutral       0.57      0.58      0.58      1233`
