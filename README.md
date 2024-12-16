@@ -96,14 +96,14 @@ The trained model was deployed via a Flask web application that allows users to 
 - Validation Accuracy: The model achieved an `accuracy of 0.6308163833937029` on the validation dataset.
 - F1-Score: Angry - 0.53, Disgusted - 0.68, Fearful - 0.49, Happy - 0.82, Neutral - 0.58, Sad - 0.50, Surprised - 0.78
 
-- s
+  
 
 ### Visualizations:
-- `Confusion Matrix`: Shows the accuracy of predictions across different classes.
+- `Confusion Matrix`: Shows the accuracy of predictions across different classes. 
   
 	REFER SCREENSHOTS
   
-- `Correctly Classified and Misclassified Images`: Samples from the validation dataset where the model correctly or incorrectly predicted emotions.
+- `Correctly Classified and Misclassified Images`: Samples from the validation dataset where the model correctly or incorrectly predicted emotions. 
 
 	REFER SCREENSHOTS
 
