@@ -12,13 +12,21 @@
 - pip install scipy
 - pip install scikit-learn matplotlib seaborn
 
-### download FER2013 dataset
+### Download FER2013 dataset
 - from below link and put in dataset folder under the project directory
 - https://www.kaggle.com/msambare/fer2013
 
-->`sample-images` folder contains the sample images for emotion detection
-->`screenshots` and `model-training-logs.txt`folder contain the required screenshots of training logs, validation results, and
-final performance metrics. 
+### Other instructions
+- `sample-images` folder contains the sample images for emotion detection
+- `screenshots` and `model-training-logs.txt`folder contain the required screenshots of training logs, validation results, and final performance metrics. 
+- pip install opencv-python / pip install opencv-python --no-cache-dir
+- pip install keras
+- pip3 install --upgrade tensorflow
+- pip install pillow
+- pip install scipy
+- pip install scikit-learn matplotlib seaborn
+->
+->
 ->`web-app-version` folder contains the web app for uploading images and predicting the emotions within them.
   -->"static" folder contains the stylesheet for the web app
   -->"templates" folder contains the html files.
