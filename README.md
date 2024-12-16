@@ -94,18 +94,9 @@ The trained model was deployed via a Flask web application that allows users to 
 
 ### Performance Metrics:
 - Validation Accuracy: The model achieved an `accuracy of 0.6308163833937029` on the validation dataset.
-- F1-Score: 
-Classification Report:
-              `precision    recall  f1-score   support`
+- F1-Score: Angry - 0.53, Disgusted - 0.68, Fearful - 0.49, Happy - 0.82, Neutral - 0.58, Sad - 0.50, Surprised - 0.78
 
-       `Angry       0.52      0.54      0.53       958` 
-   `Disgusted       0.77      0.60      0.68       111`
-     `Fearful       0.53      0.46      0.49      1024`
-       `Happy       0.80      0.83      0.82      1774`
-     `Neutral       0.57      0.58      0.58      1233`
-         `Sad       0.49      0.50      0.50      1247`
-   `Surprised       0.77      0.79      0.78       831`
-
+- s
 
 ### Visualizations:
 - `Confusion Matrix`: Shows the accuracy of predictions across different classes.
