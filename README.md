@@ -12,7 +12,10 @@
 - pip install scipy
 - pip install scikit-learn matplotlib seaborn
 
-->`dataset` folder contains FER 2013 dataset
+### download FER2013 dataset
+- from below link and put in dataset folder under the project directory
+- https://www.kaggle.com/msambare/fer2013
+
 ->`sample-images` folder contains the sample images for emotion detection
 ->`screenshots` and `model-training-logs.txt`folder contain the required screenshots of training logs, validation results, and
 final performance metrics. 
