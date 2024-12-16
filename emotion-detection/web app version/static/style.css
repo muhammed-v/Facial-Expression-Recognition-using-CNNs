@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1F6DF0, #8033C8);
+    color: #FFFFFF; 
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+    
+.container {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    margin: 20px auto;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #8033C8;
+}
+
+p {
+    font-size: 1rem;
+    color: #D0D3E1;
+    margin-bottom: 10px;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="file"] {
+    margin: 20px 0;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #1F6DF0; 
+    background-color: #ffffff;
+    color: #D0D3E1;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+    transition: 0.3s ease;
+}
+
+input[type="file"]:hover {
+    background-color: #1F6DF0;
+    color: #FFFFFF;
+}
+
+button {
+    background-color: #8033C8; 
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #1F6DF0; 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.error {
+    color: #FF4F4F;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+ul li {
+    background-color: rgb(0, 21, 255); 
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    font-size: 1rem;
+    color: #FFFFFF; 
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #8033C8;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: #1F6DF0; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    input[type="file"], button {
+        font-size: 0.9rem;
+    }
+}
