@@ -9,8 +9,8 @@ emotion_verdict = {0: "Angry", 1: "Disgusted", 2: "Fearful", 3: "Happy", 4: "Neu
 json_file = open('./detection_model.json', 'r')
 loaded_model_json = json_file.read()
 json_file.close()
-emotion_model = model_from_json(loaded_model_json)
-emotion_model.load_weights("./detection_model.h5")
+detection_model = model_from_json(loaded_model_json)
+detection_model.load_weights("./detection_model.h5")
 print("Loaded model from disk")
 
 # Loading Haar Cascade for face detection
@@ -42,7 +42,7 @@ else:
         cropped_img = np.expand_dims(np.expand_dims(cv2.resize(roi_gray_frame, (48, 48)), -1), 0)
 
         # Predicting emotion
-        emotion_prediction = emotion_model.predict(cropped_img)
+        emotion_prediction = detection_model.predict(cropped_img)
         maxindex = int(np.argmax(emotion_prediction))
 
         # Adding emotion label to the image
