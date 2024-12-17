@@ -19,8 +19,8 @@ emotion_verdict = {0: "Angry", 1: "Disgusted", 2: "Fearful", 3: "Happy", 4: "Neu
 
 with open('../detection_model.json', 'r') as json_file:
     loaded_model_json = json_file.read()
-emotion_model = model_from_json(loaded_model_json)
-emotion_model.load_weights("../detection_model.h5")
+detection_model = model_from_json(loaded_model_json)
+detection_model.load_weights("../detection_model.h5")
 print("Model loaded from disk")
 
 
@@ -55,7 +55,7 @@ def predict_emotion():
         roi_gray_frame = gray_frame[y:y + h, x:x + w]
         cropped_img = np.expand_dims(np.expand_dims(cv2.resize(roi_gray_frame, (48, 48)), -1), 0)
 
-        emotion_prediction = emotion_model.predict(cropped_img)
+        emotion_prediction = detection_model.predict(cropped_img)
         maxindex = int(np.argmax(emotion_prediction))
         emotion_label = emotion_verdict[maxindex]
         
