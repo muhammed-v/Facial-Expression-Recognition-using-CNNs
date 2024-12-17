@@ -18,7 +18,7 @@
 
 ### Other instructions
 - `sample-images` folder contains the sample images for emotion detection
-- `screenshots` and `model-training-logs.txt`folder contain the required screenshots of training logs, validation results, and final performance metrics.
+- `screenshots` and `model-training-logs.txt`folder contain the required screenshots and videos of training logs, validation results, and final performance metrics.
 - `emotion-model-training.py` is used for model training. After training, detection_model.h5 and detection_model.json are created.
 - `emotion-detector.py` is used to run the emotion detection software.
 - `web-app-version` folder contains the web app for uploading images and predicting the emotions within them. 
