@@ -47,35 +47,35 @@ emotion_verdict = {
 }
 
 # Creating the CNN model
-emotion_model = Sequential()
+detection_model = Sequential()
 
-emotion_model.add(Conv2D(32, kernel_size=(3, 3), activation="relu", input_shape=(48, 48, 1)))
-emotion_model.add(Conv2D(64, kernel_size=(3, 3), activation="relu"))
-emotion_model.add(MaxPooling2D(pool_size=(2, 2)))
-emotion_model.add(Dropout(0.25))
+detection_model.add(Conv2D(32, kernel_size=(3, 3), activation="relu", input_shape=(48, 48, 1)))
+detection_model.add(Conv2D(64, kernel_size=(3, 3), activation="relu"))
+detection_model.add(MaxPooling2D(pool_size=(2, 2)))
+detection_model.add(Dropout(0.25))
 
-emotion_model.add(Conv2D(128, kernel_size=(3, 3), activation="relu"))
-emotion_model.add(MaxPooling2D(pool_size=(2, 2)))
-emotion_model.add(Conv2D(128, kernel_size=(3, 3), activation="relu"))
-emotion_model.add(MaxPooling2D(pool_size=(2, 2)))
-emotion_model.add(Dropout(0.25))
+detection_model.add(Conv2D(128, kernel_size=(3, 3), activation="relu"))
+detection_model.add(MaxPooling2D(pool_size=(2, 2)))
+detection_model.add(Conv2D(128, kernel_size=(3, 3), activation="relu"))
+detection_model.add(MaxPooling2D(pool_size=(2, 2)))
+detection_model.add(Dropout(0.25))
 
-emotion_model.add(Flatten())
-emotion_model.add(Dense(1024, activation="relu"))
-emotion_model.add(Dropout(0.5))
-emotion_model.add(Dense(7, activation="softmax"))
+detection_model.add(Flatten())
+detection_model.add(Dense(1024, activation="relu"))
+detection_model.add(Dropout(0.5))
+detection_model.add(Dense(7, activation="softmax"))
 
 cv2.ocl.setUseOpenCL(False)
 
 
-emotion_model.compile(
+detection_model.compile(
     loss="categorical_crossentropy",
     optimizer=Adam(learning_rate=0.0001, decay=1e-6),
     metrics=["accuracy"],
 )
 
 # Training the neural network/model
-emotion_model.fit(
+detection_model.fit(
     train_generator,
     steps_per_epoch=train_generator.samples // train_generator.batch_size,
     epochs=60,
@@ -84,10 +84,10 @@ emotion_model.fit(
 )
 
 # Saving the model
-model_json = emotion_model.to_json()
+model_json = detection_model.to_json()
 with open("detection_model.json", "w") as json_file:
     json_file.write(model_json)
-emotion_model.save_weights("detection_model.h5")
+detection_model.save_weights("detection_model.h5")
 
 print("Model training completed and saved!")
 
@@ -97,7 +97,7 @@ val_labels = []
 val_predictions = []
 for i in range(len(validation_generator)):
     x_val, y_val = validation_generator[i]
-    predictions = emotion_model.predict(x_val)
+    predictions = detection_model.predict(x_val)
     val_predictions.extend(np.argmax(predictions, axis=1))
     val_labels.extend(np.argmax(y_val, axis=1))
 
