@@ -13,7 +13,7 @@
 - pip install scikit-learn matplotlib seaborn
 
 ### Download FER2013 dataset
-- from below link and put in dataset folder under the project directory
+- Download from below link and paste in dataset folder under the project directory
 - https://www.kaggle.com/msambare/fer2013
 
 ### Other instructions
