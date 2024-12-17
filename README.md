@@ -112,8 +112,8 @@ The trained model is deployed via a Flask web application that allows users to u
 ## Challenges
 
 - Finding the right Epoch for emotion detection. 
-    Epoch very large-> takes more time to train and device takes heavy load.
-    Epoch very small-> the model gives less accurate results.
+    		Epoch very large-> takes more time to train and device takes heavy load.
+    		Epoch very small-> the model gives less accurate results.
 - Some emotions, such as disgusted and fearful, were underrepresented in the dataset, which affected the model’s ability to predict these emotions accurately.
 - The Haar Cascade Classifier sometimes failed to detect faces in certain poses or angles.
   
