@@ -14,7 +14,7 @@ if not os.path.exists(UPLOAD_FOLDER):
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
-emotion_dict = {0: "Angry", 1: "Disgusted", 2: "Fearful", 3: "Happy", 4: "Neutral", 5: "Sad", 6: "Surprised"}
+emotion_verdict = {0: "Angry", 1: "Disgusted", 2: "Fearful", 3: "Happy", 4: "Neutral", 5: "Sad", 6: "Surprised"}
 
 
 with open('../detection_model.json', 'r') as json_file:
@@ -57,7 +57,7 @@ def predict_emotion():
 
         emotion_prediction = emotion_model.predict(cropped_img)
         maxindex = int(np.argmax(emotion_prediction))
-        emotion_label = emotion_dict[maxindex]
+        emotion_label = emotion_verdict[maxindex]
         
         cv2.rectangle(frame, (x, y - 50), (x + w, y + h + 10), (0, 255, 0), 2)
         cv2.putText(frame, f"{emotion_label}", (x + 5, y - 20),
